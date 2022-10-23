@@ -85,7 +85,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/test.github.io/2022/10/24/helloworld/">helloworld</a>
+      <a class="p-name article-title" href="/test.github.io/2022/10/24/helloworld/">GitHub Pages + Hexo搭建博客</a>
     </h1>
   
 
@@ -93,12 +93,38 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>This is a test file</p>
+        <h2 id="1-环境准备"><a href="#1-环境准备" class="headerlink" title="1 环境准备"></a>1 环境准备</h2><ol>
+<li>github账号准备，配置公私钥</li>
+<li>安装nodejs</li>
+</ol>
+<h2 id="2-配置Hexo"><a href="#2-配置Hexo" class="headerlink" title="2 配置Hexo"></a>2 配置Hexo</h2><h3 id="1-安装hexo与Git部署插件"><a href="#1-安装hexo与Git部署插件" class="headerlink" title="1.安装hexo与Git部署插件"></a>1.安装hexo与Git部署插件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-cli -g</span><br><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-新建站点目录"><a href="#2-新建站点目录" class="headerlink" title="2.新建站点目录"></a>2.新建站点目录</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init blog</span><br></pre></td></tr></table></figure>
+
+<p>此处的blog为目录名称</p>
+<h3 id="3-安装依赖"><a href="#3-安装依赖" class="headerlink" title="3.安装依赖"></a>3.安装依赖</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> blog</span><br><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-本地测试"><a href="#4-本地测试" class="headerlink" title="4.本地测试"></a>4.本地测试</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-编辑配置文件"><a href="#5-编辑配置文件" class="headerlink" title="5.编辑配置文件"></a>5.编辑配置文件</h3><p>编辑_config.yml文件</p>
+<p>编辑url</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">url: https://xxx.github.io/xxx.github.io/</span><br></pre></td></tr></table></figure>
+
+<p>编辑deploy</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:xxx/xxx.io.git</span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure>
+
+<p>其中repo可从ssh链接中复制</p>
+<h3 id="6-发布文章"><a href="#6-发布文章" class="headerlink" title="6.发布文章"></a>6.发布文章</h3><p>生成网页</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo g -d</span><br></pre></td></tr></table></figure>
+<p>新建md文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$hexo</span> n <span class="string">&quot;helloworld&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>在source&#x2F;_posts目录下即可找到源文件</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://0xchenbingcai.github.io/test.github.io/2022/10/24/helloworld/" data-id="cl9lz1w3q00014wwb2oex09e4" data-title="helloworld" class="article-share-link">Share</a>
+      <a data-url="https://0xchenbingcai.github.io/test.github.io/2022/10/24/helloworld/" data-id="cl9lzm5qs0000ocwb87cw0nqt" data-title="GitHub Pages + Hexo搭建博客" class="article-share-link">Share</a>
       
       
       
@@ -110,9 +136,9 @@
 
 
   
-    <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+    <article id="post-hexoIntro" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/test.github.io/2022/10/24/hello-world/" class="article-date">
+    <a href="/test.github.io/2022/10/24/hexoIntro/" class="article-date">
   <time class="dt-published" datetime="2022-10-23T22:47:30.807Z" itemprop="datePublished">2022-10-24</time>
 </a>
     
@@ -124,7 +150,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/test.github.io/2022/10/24/hello-world/">Hello World</a>
+      <a class="p-name article-title" href="/test.github.io/2022/10/24/hexoIntro/">Hello World</a>
     </h1>
   
 
@@ -149,7 +175,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://0xchenbingcai.github.io/test.github.io/2022/10/24/hello-world/" data-id="cl9lz1w3a00004wwbhq8thk0r" data-title="Hello World" class="article-share-link">Share</a>
+      <a data-url="https://0xchenbingcai.github.io/test.github.io/2022/10/24/hexoIntro/" data-id="cl9lzm5r60001ocwbh9nt66sz" data-title="Hello World" class="article-share-link">Share</a>
       
       
       
@@ -192,11 +218,11 @@
       <ul>
         
           <li>
-            <a href="/test.github.io/2022/10/24/helloworld/">helloworld</a>
+            <a href="/test.github.io/2022/10/24/helloworld/">GitHub Pages + Hexo搭建博客</a>
           </li>
         
           <li>
-            <a href="/test.github.io/2022/10/24/hello-world/">Hello World</a>
+            <a href="/test.github.io/2022/10/24/hexoIntro/">Hello World</a>
           </li>
         
       </ul>
